@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.senai.academia.HelloController"
+            styleClass="tela-menu">
+
+    <center>
+        <VBox alignment="TOP_CENTER" spacing="22">
+            <padding>
+                <Insets top="35" right="35"
+                        bottom="35" left="35"/>
+            </padding>
+
+            <Label text="Academia Sul"
+                   styleClass="titulo-menu"/>
+
+            <Label text="Escolha a opção desejada"
+                   styleClass="subtitulo-menu"/>
+
+            <GridPane hgap="15" vgap="15"
+                      maxWidth="750">
+
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"
+                                       hgrow="ALWAYS"/>
+                    <ColumnConstraints percentWidth="50"
+                                       hgrow="ALWAYS"/>
+                </columnConstraints>
+
+                <VBox GridPane.columnIndex="0"
+                      GridPane.rowIndex="0"
+                      styleClass="card-menu"
+                      onMouseClicked="#abrirAlunos">
+                    <Label text="Cadastro de alunos"
+                           styleClass="card-titulo"/>
+                    <Label text="Cadastrar e consultar alunos"
+                           styleClass="card-descricao"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="1"
+                      GridPane.rowIndex="0"
+                      styleClass="card-menu"
+                      onMouseClicked="#opcaoIndisponivel">
+                    <Label text="Cadastro de professores"
+                           styleClass="card-titulo"/>
+                    <Label text="Gerenciar professores"
+                           styleClass="card-descricao"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0"
+                      GridPane.rowIndex="1"
+                      styleClass="card-menu"
+                      onMouseClicked="#abrirPlanos">
+                    <Label text="Planos"
+                           styleClass="card-titulo"/>
+                    <Label text="Cadastrar e vincular planos"
+                           styleClass="card-descricao"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="1"
+                      GridPane.rowIndex="1"
+                      styleClass="card-menu"
+                      onMouseClicked="#opcaoIndisponivel">
+                    <Label text="Exercícios"
+                           styleClass="card-titulo"/>
+                    <Label text="Gerenciar exercícios"
+                           styleClass="card-descricao"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="0"
+                      GridPane.rowIndex="2"
+                      styleClass="card-menu"
+                      onMouseClicked="#opcaoIndisponivel">
+                    <Label text="Treinos"
+                           styleClass="card-titulo"/>
+                    <Label text="Criar e vincular treinos"
+                           styleClass="card-descricao"/>
+                </VBox>
+
+                <VBox GridPane.columnIndex="1"
+                      GridPane.rowIndex="2"
+                      styleClass="card-menu"
+                      onMouseClicked="#opcaoIndisponivel">
+                    <Label text="Consultas"
+                           styleClass="card-titulo"/>
+                    <Label text="Séries, repetições e responsáveis"
+                           styleClass="card-descricao"/>
+                </VBox>
+
+            </GridPane>
+        </VBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.senai.academia.ProfessorMaldito"
+      alignment="CENTER"
+      spacing="14"
+      prefWidth="450"
+      prefHeight="550"
+      style="-fx-background-color: #fff0f6;">
+
+    <padding>
+        <Insets top="25" right="35" bottom="25" left="35"/>
+    </padding>
+
+    <Label text="Cadastro de Professores"
+           style="-fx-font-size: 25px;
+                  -fx-font-weight: bold;
+                  -fx-text-fill: #c2185b;"/>
+
+    <Label text="Preencha os dados do professor"
+           style="-fx-font-size: 13px;
+                  -fx-text-fill: #795064;"/>
+
+    <TextField fx:id="campoNomeProfessor"
+               promptText="Nome completo"
+               maxWidth="330"/>
+
+    <TextField fx:id="campoCpfProfessor"
+               promptText="CPF"
+               maxWidth="330"/>
+
+    <TextField fx:id="campoContatoProfessor"
+               promptText="Contato"
+               maxWidth="330"/>
+
+    <TextField fx:id="campoEnderecoProfessor"
+               promptText="Endereço"
+               maxWidth="330"/>
+
+    <Button text="Cadastrar professor"
+            onAction="#cadastrarProfessor"
+            maxWidth="330"
+            style="-fx-background-color: #e91e63;
+                   -fx-text-fill: white;
+                   -fx-font-weight: bold;
+                   -fx-font-size: 14px;
+                   -fx-padding: 10 20 10 20;
+                   -fx-background-radius: 8;"/>
+
+    <Label fx:id="mensagem"
+           text="Aguardando preenchimento..."
+           wrapText="true"
+           style="-fx-text-fill: #880e4f;"/>
+
+</VBox>

@@ -1,0 +1,46 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.senai.academia.CadastroAlunoController"
+      alignment="CENTER"
+      spacing="12">
+
+    <padding>
+        <Insets top="25" right="30" bottom="25" left="30"/>
+    </padding>
+
+    <Label text="Cadastro de aluno"
+           style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="campoNome"
+               promptText="Nome completo"
+               maxWidth="350"/>
+
+    <TextField fx:id="campoCpf"
+               promptText="CPF"
+               maxWidth="350"/>
+
+    <TextField fx:id="campoMatricula"
+               promptText="Matrícula"
+               maxWidth="350"/>
+
+    <ComboBox fx:id="comboPlano"
+              promptText="Selecione o tipo de plano"
+              maxWidth="350"
+              prefWidth="350"/>
+
+    <Button text="Cadastrar aluno"
+            onAction="#cadastrarAluno"
+            maxWidth="350"/>
+
+    <Label fx:id="mensagem"
+           wrapText="true"/>
+
+</VBox>
+
